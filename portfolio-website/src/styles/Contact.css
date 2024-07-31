@@ -1,0 +1,22 @@
+.contact-container {
+  padding: 4rem 2rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-content a {
+  color: #ffd700; /* Gold color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.contact-content a:hover {
+  color: #e6b800; /* Darker gold color */
+}

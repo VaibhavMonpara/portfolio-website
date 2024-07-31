@@ -1,0 +1,38 @@
+.app {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+h2 {
+  color: #ffd700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .experience-grid,
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
