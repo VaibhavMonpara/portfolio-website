@@ -17,7 +17,7 @@
 
 .card {
   background: #1a1a1a; /* Dark grey/black */
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -31,5 +31,5 @@
 
 .card h3 {
   margin-top: 0;
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
 }

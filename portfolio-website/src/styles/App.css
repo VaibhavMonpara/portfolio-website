@@ -1,14 +1,19 @@
 /* Import Google Fonts in your CSS file */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap");
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: #ffd700; /* Gold color for headings */
+  color: #f4d147; /* Gold color for headings */
 }
 
 .app {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -17,10 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 body {
   margin: 0;
   padding: 0;
-  background: url('../assets/bg-image.jpg') no-repeat center center fixed;
+  background: url("../assets/bg-image.jpg") no-repeat center center fixed;
   background-size: cover; /* Cover the whole viewport */
   overflow-x: hidden; /* Prevent horizontal scroll */
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #f5f5f5; /* Light font color for dark background */
 }

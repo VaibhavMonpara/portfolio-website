@@ -11,7 +11,7 @@
 
 h2 {
   text-align: center;
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
   margin-bottom: 2rem;
 }
 
@@ -26,7 +26,7 @@ h2 {
   content: "";
   position: absolute;
   width: 6px;
-  background-color: #ffd700; /* Gold color */
+  background-color: #f4d147; /* Gold color */
   top: 0;
   bottom: 0;
   left: 50%;
@@ -84,7 +84,7 @@ h2 {
 }
 
 .timeline-content h3 {
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
   margin-top: 0;
 }
 
@@ -100,7 +100,7 @@ h2 {
 .read-more {
   display: inline-block;
   margin-top: 1rem;
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
   text-decoration: none;
   font-weight: bold;
   background: none;
@@ -139,7 +139,7 @@ h2 {
 }
 
 .modal-content h3 {
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
 }
 
 .modal-content h4 {

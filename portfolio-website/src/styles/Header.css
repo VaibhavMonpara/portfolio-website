@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   background-color: black;
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
   padding: 0.75rem 2rem;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -32,7 +32,7 @@
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
-  color: #ffd700; /* Gold color */
+  color: #f4d147; /* Gold color */
   transition: color 0.3s;
 }
 
@@ -66,8 +66,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffd700; /* White on hover */
-  border-bottom: 2px solid #ffd700; /* Gold underline on hover */
+  color: #f4d147; /* White on hover */
+  border-bottom: 2px solid #f4d147; /* Gold underline on hover */
 }
 
 /* Responsive styles */
