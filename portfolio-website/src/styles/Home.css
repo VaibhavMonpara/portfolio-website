@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../assets/bg-image.jpg') no-repeat center center/cover;
   color: #fff;
 }
 
@@ -28,6 +27,7 @@
 
 h1, h2 {
   margin: 0.5rem 0;
+  font-size: 2.8rem;
   color: #ffd700; /* Gold color */
 }
 

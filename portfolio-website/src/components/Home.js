@@ -8,7 +8,7 @@ const Home = () => {
       <div className="home-content">
         <img src={profileImage} alt="Profile" className="profile-image" />
         <h1>Hi, I'm Vaibhav Monpara</h1>
-        <p>Software Engineer based in Los Angeles, CA</p>
+        <p>Software engineer by day, bug hunter by night. Fueled by chai, code, and an uncanny ability to turn caffeine into features. Ready to debug the universe!</p>
         <a href="https://www.linkedin.com/in/vaibhav-monpara" target="_blank" rel="noopener noreferrer" className="btn">Connect on LinkedIn</a>
       </div>
     </section>
