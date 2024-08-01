@@ -25,7 +25,7 @@ const Experience = () => {
     },
     {
       company: "Midocean Technologies",
-      position: "Internship Trainee",
+      position: "Internship",
       period: "Oct 2020 - Dec 2020",
       description:
         "Acquired practical Python proficiency, enabling creation of efficient and streamlined code for modules. Assisted senior engineers in developing and testing new software features, contributing to the successful launch of several key projects. Participated in weekly code reviews, receiving constructive feedback and improving coding skills.",
@@ -52,16 +52,18 @@ const Experience = () => {
             <div className="timeline-item" key={index}>
               <div className="timeline-icon">
                 <a href={exp.link} target="_blank" rel="noopener noreferrer">
-                  <img src={midoceanLogo} alt={exp.company} />
+                  <img className="img-effect" src={midoceanLogo} alt={exp.company} />
                 </a>
               </div>
               <div className="timeline-content">
                 <h3>{exp.position}</h3>
                 <h4>{exp.period}</h4>
-                <p>{exp.description.slice(0, 100)}...</p>
-                <button onClick={() => openModal(exp)} className="read-more">
-                  Read more
-                </button>
+                <p>
+                  {exp.description.slice(0, 95)}...  {" "}
+                  <button onClick={() => openModal(exp)} className="read-more">
+                    Read more
+                  </button>
+                </p>
               </div>
             </div>
           ))}
@@ -75,10 +77,7 @@ const Experience = () => {
             <h4>{modalContent.period}</h4>
             <p>{modalContent.description}</p>
             <button className="modal-close" onClick={closeModal}>
-              <button
-                className="modal-close"
-                onClick={closeModal}
-              >
+              <button className="modal-close" onClick={closeModal}>
                 &times;
               </button>
             </button>
