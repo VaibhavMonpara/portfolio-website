@@ -1,0 +1,116 @@
+/* General styles for the header */
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: #f4d147; /* Gold color */
+  padding: 0.75rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header-container:hover {
+  background-color: #000; /* Darker black on hover */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.header-title {
+  flex: 1;
+}
+
+.header-title a {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #f4d147; /* Gold color */
+  transition: color 0.3s;
+}
+
+.header-title a:hover {
+  color: #fff; /* White on hover */
+}
+
+nav {
+  flex: 2;
+  text-align: right;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+nav a {
+  color: white; /* Gold color */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+
+nav a:hover {
+  color: #f4d147; /* White on hover */
+  border-bottom: 2px solid #f4d147; /* Gold underline on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-title {
+    margin-bottom: 1rem;
+  }
+
+  nav {
+    width: 100%;
+    text-align: left;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title a {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}

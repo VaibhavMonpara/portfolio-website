@@ -1,0 +1,65 @@
+/* Import Google Fonts in your CSS file */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #f4d147; /* Gold color for headings */
+}
+
+.app {
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../assets/bg-image.jpg") no-repeat center center fixed;
+  background-size: cover; /* Cover the whole viewport */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #f5f5f5; /* Light font color for dark background */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  padding: 2rem;
+  box-sizing: border-box;
+  scroll-snap-align: start; /* Optional: For scroll snapping */
+  scroll-snap-stop: always; /* Optional: For scroll snapping */
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .experience-grid,
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
