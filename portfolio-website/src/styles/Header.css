@@ -57,7 +57,7 @@ nav ul {
 }
 
 nav a {
-  color: #ffd700; /* Gold color */
+  color: white; /* Gold color */
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -66,7 +66,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff; /* White on hover */
+  color: #ffd700; /* White on hover */
   border-bottom: 2px solid #ffd700; /* Gold underline on hover */
 }
 
