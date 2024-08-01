@@ -2,7 +2,6 @@
 .experience-container {
   padding: 4rem 2rem;
   color: #fff;
-  background-color: #000; /* Black background */
 }
 
 .experience-content {
@@ -68,6 +67,12 @@ h2 {
   z-index: 2; /* Ensure image is on top */
 }
 
+.img-effect:hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform: scale(1.2); /* Slightly larger on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
 .timeline-content {
   position: relative;
   padding: 2rem;
@@ -105,7 +110,7 @@ h2 {
 }
 
 .read-more:hover {
-  color: #e6b800; /* Darker gold color */
+  transform: scale(1.05); /* Slightly larger on hover */
 }
 
 /* Modal Styles */
@@ -155,4 +160,9 @@ h2 {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.modal-close:hover {
+  transform: scale(1.1); /* Slightly larger on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
