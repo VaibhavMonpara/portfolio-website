@@ -16,7 +16,7 @@
 }
 
 .card {
-  background: #1a1a1a; /* Dark grey/black */
+  background: black; /* Dark grey/black */
   color: #ffd700; /* Gold color */
   padding: 1rem;
   border-radius: 10px;
