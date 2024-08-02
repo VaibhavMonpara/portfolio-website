@@ -14,12 +14,12 @@
 }
 
 .contact-icon {
-  color: #f4d147; /* Gold color */
+  color: #f4d147;
   font-size: 2rem;
   margin: 0 1rem;
   transition: color 0.3s;
 }
 
 .contact-icon:hover {
-  color: #e6b800; /* Darker gold color */
+  color: #e6b800;
 }

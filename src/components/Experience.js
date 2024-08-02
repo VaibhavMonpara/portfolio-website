@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Experience.css";
-import midoceanLogo from "../assets/midocean-logo.png"; // Ensure this path is correct
+import midoceanLogo from "../assets/midocean-logo.png";
 
 const Experience = () => {
   const [modalOpen, setModalOpen] = useState(false);

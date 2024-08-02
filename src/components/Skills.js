@@ -73,7 +73,6 @@ const Skills = () => {
             <div className="skill-icons">
               <SiPostgresql className="icon" />
               <FaDatabase className="icon" />
-              {/* <FaDatabase className="icon" /> */}
               <SiMongodb className="icon" />
               <SiFirebase className="icon" />
             </div>

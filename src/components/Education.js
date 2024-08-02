@@ -1,9 +1,8 @@
 import React from 'react';
 import '../styles/Education.css';
 
-// Assuming you have the logos as SVGs or image files
-import CSUFullertonLogo from '../assets/csuf-logo.png'; // Adjust path as needed
-import GTULogo from '../assets/gtu-logo.png'; // Adjust path as needed
+import CSUFullertonLogo from '../assets/csuf-logo.png';
+import GTULogo from '../assets/gtu-logo.png';
 
 const Education = () => {
   return (
