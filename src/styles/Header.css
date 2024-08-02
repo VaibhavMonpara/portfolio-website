@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   background-color: black;
-  color: #f4d147; /* Gold color */
+  color: #f4d147;
   padding: 0.75rem 2rem;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -12,7 +12,7 @@
 }
 
 .header-container:hover {
-  background-color: #000; /* Darker black on hover */
+  background-color: #000;
 }
 
 .header-content {
@@ -21,7 +21,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  flex-wrap: nowrap;
 }
 
 .header-title {
@@ -32,12 +32,12 @@
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
-  color: #f4d147; /* Gold color */
+  color: #f4d147;
   transition: color 0.3s;
 }
 
 .header-title a:hover {
-  color: #fff; /* White on hover */
+  color: #fff;
 }
 
 nav {
@@ -57,7 +57,7 @@ nav ul {
 }
 
 nav a {
-  color: white; /* Gold color */
+  color: white;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -66,42 +66,55 @@ nav a {
 }
 
 nav a:hover {
-  color: #f4d147; /* White on hover */
-  border-bottom: 2px solid #f4d147; /* Gold underline on hover */
+  color: #f4d147;
+  border-bottom: 2px solid #f4d147;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #f4d147;
+  cursor: pointer;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header-title {
-    margin-bottom: 1rem;
+  .menu-toggle {
+    display: block;
   }
 
   nav {
+    display: none;
+    position: fixed;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
     width: 100%;
-    text-align: left;
+    background-color: black;
+  }
+
+  nav.open {
+    display: flex;
+    justify-content: center;
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     width: 100%;
     padding: 0;
     margin: 0;
+    justify-content: center;
   }
 
   nav li {
-    width: 100%;
     text-align: center;
   }
 
   nav a {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.75rem 1rem;
   }
 }
 

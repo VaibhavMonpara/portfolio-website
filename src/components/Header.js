@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import '../styles/Header.css';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header-container">
       <div className="header-content">
         <div className="header-title">
           <a href="#home">&lt;VNM/&gt;</a>
         </div>
-        <nav>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+        <nav className={isMenuOpen ? 'open' : ''}>
           <ul>
             <li><Link to="home" smooth={true} duration={650}>Home</Link></li>
             <li><Link to="experience" smooth={true} duration={650}>Experience</Link></li>

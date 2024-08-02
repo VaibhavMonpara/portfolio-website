@@ -23,25 +23,25 @@
   margin-bottom: 1rem;
   border: 4px solid #f4d147;
   transition: transform 0.3s, box-shadow 0.3s;
-  object-fit: cover; /* Ensure the image covers the container */
+  object-fit: cover;
 }
 
 .profile-image:hover {
-  transform: scale(1.1); /* Slightly larger on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
   margin: 0.5rem 0;
   font-size: 2.8rem;
-  color: #f4d147; /* Gold color */
+  color: #f4d147;
 }
 
 p {
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.5;
-  font-weight: 400; /* Adjust font weight */
+  font-weight: 400;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -57,5 +57,5 @@ p {
 }
 
 .social-icon:hover {
-  color: #e6b800; /* Darker gold color on hover */
+  color: #e6b800;
 }

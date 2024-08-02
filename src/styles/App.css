@@ -1,4 +1,3 @@
-/* Import Google Fonts in your CSS file */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap");
 
 h1,
@@ -9,7 +8,7 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: #f4d147; /* Gold color for headings */
+  color: #f4d147;
 }
 
 .app {
@@ -27,7 +26,7 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll */
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #f5f5f5; /* Light font color for dark background */
+  color: #f5f5f5;
 }
 
 section {
@@ -38,8 +37,8 @@ section {
   /* height: 100vh; */
   padding: 2rem;
   box-sizing: border-box;
-  scroll-snap-align: start; /* Optional: For scroll snapping */
-  scroll-snap-stop: always; /* Optional: For scroll snapping */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 @media (max-width: 768px) {
