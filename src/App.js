@@ -6,6 +6,8 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 import './styles/App.css';
 
 const App = () => {
@@ -18,6 +20,7 @@ const App = () => {
       <Skills />
       <Education />
       <Contact />
+      <Footer />
     </div>
   );
 };
