@@ -1,0 +1,18 @@
+.footer-container {
+    background: black; 
+    padding: 1rem 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  

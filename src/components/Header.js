@@ -7,7 +7,7 @@ const Header = () => {
     <header className="header-container">
       <div className="header-content">
         <div className="header-title">
-          <a href="#home">VNM</a>
+          <a href="#home">&lt;VNM/&gt;</a>
         </div>
         <nav>
           <ul>
