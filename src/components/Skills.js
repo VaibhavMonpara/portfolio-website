@@ -30,7 +30,7 @@ import {
   SiFigma,
   SiFlask,
   SiPostman,
-  SiMongodb
+  SiMongodb,
 } from "react-icons/si";
 import "../styles/Skills.css";
 

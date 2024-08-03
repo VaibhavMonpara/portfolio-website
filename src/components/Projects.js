@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Projects.css";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   return (
@@ -10,34 +11,74 @@ const Projects = () => {
           <div className="card">
             <h3>Property Management System</h3>
             <p>
-              Developed a comprehensive Property Management System using Python,
-              JavaScript, and XML, integrated external APIs for real- time data
-              retrieval, which improved property management efficiency by 40%.
-              Streamlined reservation management and guest administration
-              processes, accounting for 80% of system's functionality.
+              Developed a Property Management System using Python, JavaScript,
+              and XML. Integrated external APIs for real-time data retrieval,
+              improving management efficiency by 40%.
             </p>
+            <div className="skills-used">
+              <span className="skill-badge">Python</span>
+              <span className="skill-badge">PostgreSQL</span>
+              <span className="skill-badge">JavaScript</span>
+              <span className="skill-badge">Odoo</span>
+              <span className="skill-badge">XML</span>
+              <span className="skill-badge">APIs</span>
+              <a
+                href="https://github.com/VaibhavMonpara/pms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                <FaGithub />
+              </a>
+            </div>
           </div>
           <div className="card">
             <h3>E-commerce Website</h3>
             <p>
-              Integrated a dynamic e-commerce website using the Django
-              framework, enabling seamless product browsing, cart management,
-              and order tracking, enhancing online shopping experience. 
-              Optimized user interface and performance while ensuring robust
-              security measures for safe transactions.
+              Built a dynamic e-commerce website using Django. Features include
+              product browsing, cart management, and order tracking, enhancing
+              the shopping experience.
             </p>
+            <div className="skills-used">
+              <span className="skill-badge">Python</span>
+              <span className="skill-badge">SQLite</span>
+              <span className="skill-badge">Django</span>
+              <span className="skill-badge">HTML</span>
+              <span className="skill-badge">CSS</span>
+              <span className="skill-badge">JavaScript</span>
+              <a
+                href="https://github.com/VaibhavMonpara/MyAwesomeCart"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                <FaGithub />
+              </a>
+            </div>
           </div>
           <div className="card">
             <h3>Medi-kit</h3>
             <p>
-              Co-developed Medi-kit, a web application with Django framework,
-              focusing on features like pathology report management, a
-              healthcare articles repository, and doctor-patient interactions,
-              enhancing healthcare accessibility and communication. 
-              Implemented backend functionalities with Python and designed
-              frontend using HTML, CSS, and JavaScript, contributing to a
-              user-friendly interface and seamless user experience.
+              Co-developed Medi-kit, focusing on pathology report management,
+              healthcare articles, and doctor-patient interactions. Enhanced
+              accessibility and communication in healthcare.
             </p>
+            <div className="skills-used">
+              <span className="skill-badge">Python</span>
+              <span className="skill-badge">MySQL</span>
+              <span className="skill-badge">Django</span>
+              <span className="skill-badge">HTML</span>
+              <span className="skill-badge">CSS</span>
+              <span className="skill-badge">JavaScript</span>
+              <a
+                href="https://github.com/VaibhavMonpara"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                <FaGithub />
+              </a>
+            </div>
           </div>
         </div>
       </div>
