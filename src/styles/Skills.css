@@ -68,6 +68,7 @@
 
 .skill-item:hover .icon {
   transform: scale(1.15); /* Slightly larger on hover */
+  color: #f4d147;
 }
 
 .skill-item:hover .skill-name {
