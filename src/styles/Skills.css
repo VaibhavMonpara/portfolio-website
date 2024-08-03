@@ -1,3 +1,5 @@
+/* Existing styles */
+
 .skills-container {
   padding: 4rem 2rem;
   color: #fff;
@@ -19,6 +21,7 @@
   background: #1a1a1a;
   color: #f4d147;
   padding: 1rem;
+  padding-bottom: 1.8rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -35,13 +38,39 @@
   justify-content: center;
 }
 
+/* Additional styles for hover effect and skill name */
+
+.skill-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-name {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -30px;
+  background: rgba(26, 26, 26, 0.9); /* Slightly transparent black */
+  color: #f4d147;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
 .icon {
   font-size: 4rem;
   color: #fff;
   transition: color 0.3s, transform 0.3s;
 }
 
-.icon:hover {
-  color: #f4d147;
-  transform: scale(1.1);
+.skill-item:hover .icon {
+  transform: scale(1.15); /* Slightly larger on hover */
+}
+
+.skill-item:hover .skill-name {
+  visibility: visible;
+  opacity: 1;
 }
