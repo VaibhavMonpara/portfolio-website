@@ -12,24 +12,3 @@ Technologies Used
     Styling: CSS Flexbox, CSS Grid, Responsive Design
     Deployment: Hosted on Netlify
 
-Usage
-Clone the repository:
-    git clone https://https://github.com/VaibhavMonpara/portfolio-website.git
-
-Navigate to the project directory:
-    cd your-portfolio-repo
-
-Install dependencies:
-    npm install
-
-Start the development server:
-    npm start
-
-Build the project for production:
-    npm run build
-
-Contributing
-    Contributions, issues, and feature requests are welcome! Feel free to fork the repository and submit a pull request.
-
-License
-    This project is open-source and available under the MIT License.
