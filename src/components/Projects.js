@@ -9,6 +9,29 @@ const Projects = () => {
         <h2>PROJECTS</h2>
         <div className="projects-grid">
           <div className="card">
+            <h3>Energy Consumption and Sustainability Analytics</h3>
+            <p>Analyzed renewable energy consumption data to forecast future usage and provide sustainability
+               recommendations. Developed a dashboard with Plotly Dash
+               for visualizing key insights and trends.
+            </p>
+            <div className="skills-used">
+              <span className="skill-badge">Python</span>
+              <span className="skill-badge">Dash</span>
+              <span className="skill-badge">Matplotlib</span>
+              <span className="skill-badge">Seaborn</span>
+              <span className="skill-badge">Pandas</span>
+              <span className="skill-badge">Scikit-learn</span>
+              <a
+                href="https://github.com/VaibhavMonpara/ecsa-project"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                <FaGithub />
+              </a>
+            </div>
+          </div>
+          <div className="card">
             <h3>Property Management System</h3>
             <p>
               Developed a Property Management System using Python, JavaScript,
