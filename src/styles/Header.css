@@ -1,12 +1,9 @@
 /* General styles for the header */
 .header-container {
-  position: fixed;
   top: 0;
-  width: 100%;
   background-color: black;
   color: #f4d147;
   padding: 0.75rem 2rem;
-  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s ease-in-out;
 }
@@ -19,13 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: nowrap;
-}
-
-.header-title {
-  flex: 1;
 }
 
 .header-title a {
@@ -40,19 +30,11 @@
   color: #fff;
 }
 
-nav {
-  flex: 2;
-  text-align: right;
-}
-
 /* Navigation styles */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 1.5rem;
-  justify-content: flex-end;
   cursor: pointer;
 }
 
@@ -79,7 +61,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -88,7 +69,7 @@ nav a:hover {
   nav {
     display: none;
     position: fixed;
-    top: 60px; /* Adjust based on header height */
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: black;
@@ -115,6 +96,20 @@ nav a:hover {
   nav a {
     display: block;
     padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .header-title a {
+    font-size: 1.4rem;
   }
 }
 

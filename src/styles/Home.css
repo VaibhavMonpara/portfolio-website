@@ -59,3 +59,34 @@ p {
 .social-icon:hover {
   color: #e6b800;
 }
+
+/* Responsive styles for home container */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .home-data {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .home-data {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+}
