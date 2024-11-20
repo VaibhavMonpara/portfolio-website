@@ -22,7 +22,7 @@ const Experience = () => {
     {
       company: "Airkitchenz Inc",
       position: "Co-Founder &Software Engineer",
-      period: "Auguest 2024 – Present",
+      period: "August 2024 – Present",
       description:
         "As a Co-Founder and Software Engineer, I am transforming the food industry through technology by developing an innovative kitchen rental platform. I have spearheaded the project from its inception, designing and implementing a robust system using React for the frontend and Node.js with Express for the backend. Leveraging AWS services such as EC2, DynamoDB, S3, and Route 53, I ensured seamless scalability, performance, and reliability. This platform connects entrepreneurs with kitchen spaces, empowering food businesses to grow efficiently.",
       link: "https://airkitchenz.com",
