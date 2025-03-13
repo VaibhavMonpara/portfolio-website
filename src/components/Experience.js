@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/Experience.css";
 import midoceanLogo from "../assets/midocean-logo.png";
 import aklogo from "../assets/logo.png";
