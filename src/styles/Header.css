@@ -1,64 +1,90 @@
-/* General styles for the header */
-.header-container {
-  top: 0;
-  background-color: black;
-  color: #f4d147;
-  padding: 0.75rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease-in-out;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
-.header-container:hover {
-  background-color: #000;
+.header-container {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-family: "Inter", sans-serif;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header-title a {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-decoration: none;
-  color: #f4d147;
-  transition: color 0.3s;
+  color: #00ddeb;
+  transition: color 0.3s ease;
 }
 
 .header-title a:hover {
-  color: #fff;
-}
-
-/* Navigation styles */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  color: #00ddeb;
   cursor: pointer;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
 nav a {
-  color: white;
+  color: #d1d1d1;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s, border-bottom 0.3s;
-  padding-bottom: 5px;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
-nav a:hover {
-  color: #f4d147;
-  border-bottom: 2px solid #f4d147;
+nav a:hover,
+nav a.active {
+  color: #00ddeb;
+  cursor: pointer;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #00ddeb;
+  transition: width 0.3s ease;
+  cursor: pointer;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
 }
 
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
-  color: #f4d147;
+  font-size: 1.8rem;
+  color: #00ddeb;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -69,52 +95,35 @@ nav a:hover {
   nav {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
-    background-color: black;
+    background: rgba(15, 15, 15, 0.98);
+    padding: 1rem 0;
   }
 
   nav.open {
-    display: flex;
-    justify-content: center;
+    display: block;
   }
 
   nav ul {
-    flex-direction: row;
-    gap: 1rem;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-  }
-
-  nav li {
+    flex-direction: column;
+    gap: 1.5rem;
     text-align: center;
   }
 
   nav a {
-    display: block;
-    padding: 0.75rem 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-  }
-
-  .header-title a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .header-title a {
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle {
     font-size: 1.5rem;
   }
 

@@ -1,172 +1,114 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Experience.css";
 import midoceanLogo from "../assets/midocean-logo.png";
-import aklogo from "../assets/logo.jpg";
+import aklogo from "../assets/logo.png";
 
 const Experience = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({});
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  // Add window resize listener
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   const experiences = [
     {
       company: "Airkitchenz Inc",
-      position: "Co-Founder &Software Engineer",
-      period: "August 2024 – Present",
-      description:
-        "As a Co-Founder and Software Engineer, I am transforming the food industry through technology by developing an innovative kitchen rental platform. I have spearheaded the project from its inception, designing and implementing a robust system using React for the frontend and Node.js with Express for the backend. Leveraging AWS services such as EC2, DynamoDB, S3, and Route 53, I ensured seamless scalability, performance, and reliability. This platform connects entrepreneurs with kitchen spaces, empowering food businesses to grow efficiently.",
+      position: "Co-Founder & Lead Engineer",
+      period: "Aug 2024 – Present",
+      description: ["On a mission to revolutionize the food industry."],
       link: "https://airkitchenz.com",
       logo: aklogo,
     },
     {
       company: "Midocean Technologies",
-      position: "Software Engineer",
-      period: "Jan 2022 – May 2022",
-      description:
-        "Led a project from initiation to completion post-client pitch, achieving timely delivery and a 15% boost in client satisfaction. Developed and implemented a new software feature that optimized client workflow, resulting in a 20% efficiency increase. Collaborated with cross-functional teams to identify and resolve system issues, enhancing overall system reliability.",
+      position: "Sr. Software Engineer",
+      period: "Oct 2020 – May 2022",
       link: "https://www.midocean.tech",
-      achievements: [
-        "Led development of key features resulting in 20% efficiency increase",
-        "Managed cross-functional team collaboration",
-        "Implemented automated testing reducing bugs by 30%"
+      logo: midoceanLogo,
+      journey: [
+        {
+          role: "Sr. Software Engineer",
+          period: "Jan 2022 – May 2022",
+          description: [
+            "Led a project from initiation to completion post-client pitch, achieved timely delivery and a 15% boost in client satisfaction.",
+            "Played a pivotal role in sprint planning, retrospectives, and daily stand-ups, ensuring efficient project execution and delivery.",
+            "Guided and coached a team of junior developers, imparting best practices and collaborating on project development; improved code quality and decreased bug resolution time by 30%.",
+          ],
+        },
+        {
+          role: "Jr. Software Engineer",
+          period: "Jan 2021 – Dec 2021",
+          description: [
+            "Deployed a comprehensive Brass Manufacturing Module using Python, JavaScript, HTML, CSS, jQuery, XML, and integrated it with a Flutter mobile app, increasing operational efficiency by 25% and reduced manual reporting.",
+            "Created a Telegram bot for trading operations with APIs and Python, and designed an admin dashboard, leading to a 40% increase in trade execution speed and reduced administrative workload.",
+            "Programmed a robust shipment tracking system with Python, JavaScript, and APIs, achieved a significant improvement in package tracking accuracy and a 20% boost in customer satisfaction through real-time updates.",
+            "Built a system for solar panel installations using Python, JavaScript, HTML, CSS, and Flutter, providing video/photo verification, and reducing post-installation inspections by 50%.",
+          ],
+        },
+        {
+          role: "Internship",
+          period: "Oct 2020 – Dec 2020",
+          description: [
+            "Acquired practical Python proficiency, enabling creation of efficient and streamlined code for modules.",
+            "Engaged in Agile development practices by participating in sprint planning and daily stand-ups, ensuring project alignment and progress tracking.",
+            "Received mentoring from team leads and senior developers, embracing best practices and fostering personal and professional growth.",
+          ],
+        },
       ],
-      logo: midoceanLogo,
-    },
-    {
-      company: "Midocean Technologies",
-      position: "Jr. Software Engineer",
-      period: "Jan 2021 – Dec 2021",
-      description:
-        "Deployed a comprehensive Brass Manufacturing Module using Python, JavaScript, HTML, CSS, jQuery, XML, and integrated it with a Flutter mobile app. Developed an ERP system for inventory and order management, improving the client’s operational efficiency by 30%. Provided ongoing maintenance and troubleshooting for existing software solutions.",
-      link: "https://www.midocean.tech",
-      logo: midoceanLogo,
-    },
-    {
-      company: "Midocean Technologies",
-      position: "Internship",
-      period: "Oct 2020 - Dec 2020",
-      description:
-        "Acquired practical Python proficiency, enabling creation of efficient and streamlined code for modules. Assisted senior engineers in developing and testing new software features, contributing to the successful launch of several key projects. Participated in weekly code reviews, receiving constructive feedback and improving coding skills.",
-      link: "https://www.midocean.tech",
-      logo: midoceanLogo,
     },
   ];
-
-  const openModal = (experience) => {
-    setModalContent(experience);
-    setModalOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-    setModalContent({});
-    document.body.style.overflow = 'unset';
-  };
 
   return (
     <section id="experience" className="experience-container">
       <div className="experience-content">
-        <h2>WORK EXPERIENCE</h2>
-        <div className="timeline">
+        <h2>Experience</h2>
+        <div className="experience-grid">
           {experiences.map((exp, index) => (
-            <div className="timeline-item" key={index}>
-              <div className="timeline-icon">
-                <a 
-                  href={exp.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label={`Visit ${exp.company} website`}
-                >
-                  <img src={exp.logo} alt={exp.company} />
-                </a>
+            <div className="experience-card" key={index}>
+              <div className="card-header">
+                <img
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  className="card-logo"
+                  loading="lazy"
+                />
+                <div className="card-info">
+                  <h3>{exp.position}</h3>
+                  <h4>
+                    <a
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {exp.company}
+                    </a>{" "}
+                    • {exp.period}
+                  </h4>
+                </div>
               </div>
-              <div 
-                className="timeline-content"
-                role="article"
-                aria-label={`${exp.position} at ${exp.company}`}
-              >
-                <h3>{exp.position}</h3>
-                <h4>{exp.period}</h4>
-                {isMobile ? (
-                  // Full content for mobile
-                  <>
-                    <p>{exp.description}</p>
-                    {exp.achievements && (
-                      <div className="achievements-mobile">
-                        <h4>Key Achievements:</h4>
-                        <ul>
-                          {exp.achievements.map((achievement, index) => (
-                            <li key={index}>{achievement}</li>
+              <div className="card-details">
+                {exp.description ? (
+                  <ul className="description-list">
+                    {exp.description.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className="journey-container">
+                    {exp.journey.map((stage, idx) => (
+                      <div className="journey-stage" key={idx}>
+                        <div className="journey-header">
+                          <h5>{stage.role}</h5>
+                          <span>{stage.period}</span>
+                        </div>
+                        <ul className="description-list">
+                          {stage.description.map((item, i) => (
+                            <li key={i}>{item}</li>
                           ))}
                         </ul>
                       </div>
-                    )}
-                  </>
-                ) : (
-                  // Truncated content with modal for desktop
-                  <p>
-                    {exp.description.slice(0, 95)}...{" "}
-                    <button 
-                      onClick={() => openModal(exp)} 
-                      className="read-more"
-                      aria-label={`Read more about ${exp.position} role`}
-                    >
-                      Read more
-                    </button>
-                  </p>
+                    ))}
+                  </div>
                 )}
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      {!isMobile && modalOpen && (
-        <div 
-          className="modal-overlay" 
-          onClick={closeModal}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="modal-title"
-        >
-          <div 
-            className="modal-content" 
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 id="modal-title">{modalContent.position}</h3>
-            <h4>{modalContent.period}</h4>
-            <p>{modalContent.description}</p>
-            {modalContent.achievements && (
-              <div className="achievements">
-                <h4>Key Achievements:</h4>
-                <ul>
-                  {modalContent.achievements.map((achievement, index) => (
-                    <li key={index}>{achievement}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <button 
-              className="modal-close" 
-              onClick={closeModal}
-              aria-label="Close modal"
-            >
-              ×
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

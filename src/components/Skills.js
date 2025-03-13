@@ -35,147 +35,76 @@ import {
 import "../styles/Skills.css";
 
 const Skills = () => {
+  const skillCategories = [
+    {
+      title: "Languages",
+      skills: [
+        { icon: FaPython, name: "Python" },
+        { icon: FaJava, name: "Java" },
+        { icon: SiCplusplus, name: "C++" },
+        { icon: SiCsharp, name: "C#" },
+        { icon: SiHtml5, name: "HTML" },
+        { icon: SiCss3, name: "CSS" },
+        { icon: SiJavascript, name: "JavaScript" },
+        { icon: SiTypescript, name: "TypeScript" },
+      ],
+    },
+    {
+      title: "Frameworks",
+      skills: [
+        { icon: SiOdoo, name: "Odoo" },
+        { icon: SiDjango, name: "Django" },
+        { icon: SiFlask, name: "Flask" },
+        { icon: SiSpringboot, name: "Spring Boot" },
+        { icon: SiReact, name: "React" },
+        { icon: FaNodeJs, name: "Node.js" },
+        { icon: SiJquery, name: "jQuery" },
+        { icon: SiFlutter, name: "Flutter" },
+        { icon: SiBootstrap, name: "Bootstrap" },
+        { icon: SiPostman, name: "Postman" },
+      ],
+    },
+    {
+      title: "Databases",
+      skills: [
+        { icon: SiPostgresql, name: "PostgreSQL" },
+        { icon: FaDatabase, name: "SQL" },
+        { icon: SiMongodb, name: "MongoDB" },
+        { icon: SiFirebase, name: "Firebase" },
+      ],
+    },
+    {
+      title: "DevOps & Tools",
+      skills: [
+        { icon: FaAws, name: "AWS" },
+        { icon: FaGithub, name: "GitHub" },
+        { icon: FaDocker, name: "Docker" },
+        { icon: FaLinux, name: "Linux" },
+        { icon: SiFigma, name: "Figma" },
+        { icon: FaJira, name: "Jira" },
+        { icon: FaSlack, name: "Slack" },
+      ],
+    },
+  ];
+
   return (
     <section id="skills" className="skills-container">
       <div className="skills-content">
-        <h2>SKILLS</h2>
+        <h2>Skills</h2>
         <div className="skills-grid">
-          <div className="skills-category">
-            <h3>Languages</h3>
-            <div className="skill-icons">
-              <div className="skill-item">
-                <FaPython className="icon" />
-                <div className="skill-name">Python</div>
-              </div>
-              <div className="skill-item">
-                <FaJava className="icon" />
-                <div className="skill-name">Java</div>
-              </div>
-              <div className="skill-item">
-                <SiCplusplus className="icon" />
-                <div className="skill-name">C++</div>
-              </div>
-              <div className="skill-item">
-                <SiCsharp className="icon" />
-                <div className="skill-name">C#</div>
-              </div>
-              <div className="skill-item">
-                <SiHtml5 className="icon" />
-                <div className="skill-name">HTML</div>
-              </div>
-              <div className="skill-item">
-                <SiCss3 className="icon" />
-                <div className="skill-name">CSS</div>
-              </div>
-              <div className="skill-item">
-                <SiJavascript className="icon" />
-                <div className="skill-name">JavaScript</div>
-              </div>
-              <div className="skill-item">
-                <SiTypescript className="icon" />
-                <div className="skill-name">TypeScript</div>
+          {skillCategories.map((category, index) => (
+            <div className="skills-category" key={index}>
+              <h3>{category.title}</h3>
+              <div className="skill-icons">
+                {category.skills.map((skill, idx) => (
+                  <div className="skill-item" key={idx}>
+                    <skill.icon className="icon" />
+                    <span className="skill-name">{skill.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-          <div className="skills-category">
-            <h3>Frameworks</h3>
-            <div className="skill-icons">
-              <div className="skill-item">
-                <SiOdoo className="icon" />
-                <div className="skill-name">Odoo</div>
-              </div>
-              <div className="skill-item">
-                <SiDjango className="icon" />
-                <div className="skill-name">Django</div>
-              </div>
-              <div className="skill-item">
-                <SiFlask className="icon" />
-                <div className="skill-name">Flask</div>
-              </div>
-              <div className="skill-item">
-                <SiSpringboot className="icon" />
-                <div className="skill-name">Spring Boot</div>
-              </div>
-              <div className="skill-item">
-                <SiReact className="icon" />
-                <div className="skill-name">React</div>
-              </div>
-              <div className="skill-item">
-                <FaNodeJs className="icon" />
-                <div className="skill-name">Node.js</div>
-              </div>
-              <div className="skill-item">
-                <SiJquery className="icon" />
-                <div className="skill-name">jQuery</div>
-              </div>
-              <div className="skill-item">
-                <SiFlutter className="icon" />
-                <div className="skill-name">Flutter</div>
-              </div>
-              <div className="skill-item">
-                <SiBootstrap className="icon" />
-                <div className="skill-name">Bootstrap</div>
-              </div>
-              <div className="skill-item">
-                <SiPostman className="icon" />
-                <div className="skill-name">Postman</div>
-              </div>
-            </div>
-          </div>
-          <div className="skills-category">
-            <h3>Databases</h3>
-            <div className="skill-icons">
-              <div className="skill-item">
-                <SiPostgresql className="icon" />
-                <div className="skill-name">PostgreSQL</div>
-              </div>
-              <div className="skill-item">
-                <FaDatabase className="icon" />
-                <div className="skill-name">SQL</div>
-              </div>
-              <div className="skill-item">
-                <SiMongodb className="icon" />
-                <div className="skill-name">MongoDB</div>
-              </div>
-              <div className="skill-item">
-                <SiFirebase className="icon" />
-                <div className="skill-name">Firebase</div>
-              </div>
-            </div>
-          </div>
-          <div className="skills-category">
-            <h3>DevOps/Cloud/Tech</h3>
-            <div className="skill-icons">
-              <div className="skill-item">
-                <FaAws className="icon" />
-                <div className="skill-name">AWS</div>
-              </div>
-              <div className="skill-item">
-                <FaGithub className="icon" />
-                <div className="skill-name">GitHub</div>
-              </div>
-              <div className="skill-item">
-                <FaDocker className="icon" />
-                <div className="skill-name">Docker</div>
-              </div>
-              <div className="skill-item">
-                <FaLinux className="icon" />
-                <div className="skill-name">Linux</div>
-              </div>
-              <div className="skill-item">
-                <SiFigma className="icon" />
-                <div className="skill-name">Figma</div>
-              </div>
-              <div className="skill-item">
-                <FaJira className="icon" />
-                <div className="skill-name">Jira</div>
-              </div>
-              <div className="skill-item">
-                <FaSlack className="icon" />
-                <div className="skill-name">Slack</div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

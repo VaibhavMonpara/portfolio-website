@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
 .education-container {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   color: #fff;
   text-align: center;
+  font-family: "Inter", sans-serif;
 }
 
 .education-content {
@@ -9,42 +12,88 @@
   margin: 0 auto;
 }
 
+.education-content h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #00ddeb;
+  margin-bottom: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.education-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #00ddeb, transparent);
+}
+
 .education-grid {
-  display: flex;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .card {
-  background: #1a1a1a;
-  color: #f4d147;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(26, 26, 26, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 221, 235, 0.1);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 221, 235, 0.15);
 }
 
-.card h3,
-.card h4 {
-  margin-top: 0;
-  color: #f4d147;
+.card h3 {
+  margin: 0 0 0.75rem;
+  color: #00ddeb;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  font-weight: 600;
 }
 
 .card h4.degree {
-  color: #fff;
+  color: #d1d1d1;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+
+.card p {
+  color: #d1d1d1;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 300;
 }
 
 .logo {
-  max-width: 90px;
-  max-height: 90px;
-  margin-bottom: 1rem;
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: translateY(5px);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    padding: 4rem 1rem;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
 }

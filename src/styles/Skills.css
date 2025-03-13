@@ -1,9 +1,10 @@
-/* Existing styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 .skills-container {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   color: #fff;
   text-align: center;
+  font-family: "Inter", sans-serif;
 }
 
 .skills-content {
@@ -11,67 +12,106 @@
   margin: 0 auto;
 }
 
+.skills-content h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #00ddeb;
+  margin-bottom: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.skills-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #00ddeb, transparent);
+}
+
 .skills-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
 .skills-category {
-  background: #1a1a1a;
-  color: #f4d147;
-  padding: 1rem;
-  padding-bottom: 1.8rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background: rgba(26, 26, 26, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 221, 235, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: translateY(-5px);
 }
 
 .skills-category h3 {
-  margin-top: 0;
-  color: #f4d147;
+  margin: 0 0 1.5rem;
+  color: #00ddeb;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .skill-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
 }
-
-/* Additional styles for hover effect and skill name */
 
 .skill-item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.skill-name {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  bottom: -30px;
-  background: rgba(26, 26, 26, 0.9); /* Slightly transparent black */
-  color: #f4d147;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  transition: visibility 0.3s, opacity 0.3s;
+.skill-item:hover {
+  transform: scale(1.1);
 }
 
 .icon {
-  font-size: 4rem;
-  color: #fff;
-  transition: color 0.3s, transform 0.3s;
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
 }
 
 .skill-item:hover .icon {
-  transform: scale(1.15); /* Slightly larger on hover */
-  color: #f4d147;
+  transform: scale(1.1);
 }
 
-.skill-item:hover .skill-name {
-  visibility: visible;
-  opacity: 1;
+.skill-name {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 4rem 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-category {
+    padding: 1.5rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
 }

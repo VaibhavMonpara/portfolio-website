@@ -3,106 +3,71 @@ import "../styles/Projects.css";
 import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
+  const projects = [
+    {
+      title: "Energy Consumption & Sustainability Analytics",
+      description:
+        "Built a data-driven dashboard to analyze renewable energy trends and provide sustainability insights using Python and Plotly Dash.",
+      skills: [
+        "Python",
+        "Dash",
+        "Matplotlib",
+        "Seaborn",
+        "Pandas",
+        "Scikit-learn",
+      ],
+      github: "https://github.com/VaibhavMonpara/ecsa-project",
+    },
+    {
+      title: "Property Management System",
+      description:
+        "Created an efficient property management solution with real-time API integrations, boosting productivity by 40%.",
+      skills: ["Python", "PostgreSQL", "JavaScript", "Odoo", "XML", "APIs"],
+      github: "https://github.com/VaibhavMonpara/pms",
+    },
+    {
+      title: "E-commerce Platform",
+      description:
+        "Developed a full-featured e-commerce site with Django, including cart management and order tracking for an enhanced user experience.",
+      skills: ["Python", "SQLite", "Django", "HTML", "CSS", "JavaScript"],
+      github: "https://github.com/VaibhavMonpara/MyAwesomeCart",
+    },
+    {
+      title: "Medi-kit Healthcare System",
+      description:
+        "Co-developed a healthcare platform for report management and doctor-patient communication, improving accessibility.",
+      skills: ["Python", "MySQL", "Django", "HTML", "CSS", "JavaScript"],
+      github: "https://github.com/VaibhavMonpara",
+    },
+  ];
+
   return (
     <section id="projects" className="projects-container">
       <div className="projects-content">
-        <h2>PROJECTS</h2>
+        <h2>Projects</h2>
         <div className="projects-grid">
-          <div className="card">
-            <h3>Energy Consumption and Sustainability Analytics</h3>
-            <p>Analyzed renewable energy consumption data to forecast future usage and provide sustainability
-               recommendations. Developed a dashboard with Plotly Dash
-               for visualizing key insights and trends.
-            </p>
-            <div className="skills-used">
-              <span className="skill-badge">Python</span>
-              <span className="skill-badge">Dash</span>
-              <span className="skill-badge">Matplotlib</span>
-              <span className="skill-badge">Seaborn</span>
-              <span className="skill-badge">Pandas</span>
-              <span className="skill-badge">Scikit-learn</span>
-              <a
-                href="https://github.com/VaibhavMonpara/ecsa-project"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-link"
-              >
-                <FaGithub />
-              </a>
+          {projects.map((project, index) => (
+            <div className="card" key={index}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="skills-used">
+                {project.skills.map((skill, idx) => (
+                  <span className="skill-badge" key={idx}>
+                    {skill}
+                  </span>
+                ))}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-link"
+                  aria-label={`GitHub for ${project.title}`}
+                >
+                  <FaGithub />
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="card">
-            <h3>Property Management System</h3>
-            <p>
-              Developed a Property Management System using Python, JavaScript,
-              and XML. Integrated external APIs for real-time data retrieval,
-              improving management efficiency by 40%.
-            </p>
-            <div className="skills-used">
-              <span className="skill-badge">Python</span>
-              <span className="skill-badge">PostgreSQL</span>
-              <span className="skill-badge">JavaScript</span>
-              <span className="skill-badge">Odoo</span>
-              <span className="skill-badge">XML</span>
-              <span className="skill-badge">APIs</span>
-              <a
-                href="https://github.com/VaibhavMonpara/pms"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-link"
-              >
-                <FaGithub />
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <h3>E-commerce Website</h3>
-            <p>
-              Built a dynamic e-commerce website using Django. Features include
-              product browsing, cart management, and order tracking, enhancing
-              the shopping experience.
-            </p>
-            <div className="skills-used">
-              <span className="skill-badge">Python</span>
-              <span className="skill-badge">SQLite</span>
-              <span className="skill-badge">Django</span>
-              <span className="skill-badge">HTML</span>
-              <span className="skill-badge">CSS</span>
-              <span className="skill-badge">JavaScript</span>
-              <a
-                href="https://github.com/VaibhavMonpara/MyAwesomeCart"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-link"
-              >
-                <FaGithub />
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <h3>Medi-kit</h3>
-            <p>
-              Co-developed Medi-kit, focusing on pathology report management,
-              healthcare articles, and doctor-patient interactions. Enhanced
-              accessibility and communication in healthcare.
-            </p>
-            <div className="skills-used">
-              <span className="skill-badge">Python</span>
-              <span className="skill-badge">MySQL</span>
-              <span className="skill-badge">Django</span>
-              <span className="skill-badge">HTML</span>
-              <span className="skill-badge">CSS</span>
-              <span className="skill-badge">JavaScript</span>
-              <a
-                href="https://github.com/VaibhavMonpara"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-link"
-              >
-                <FaGithub />
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
